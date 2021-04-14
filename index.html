@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Login</title>
+<!-- Include CSS File Here -->
+<link rel="stylesheet" href="style.css"/>
+<!-- Include JS File Here -->
+<script >// Below function Executes on click of login button.
+function validate(callback){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if ( username == "admin" && password == "12345"){
+    /*alert ("Login successfull");
+    window.location ="main.html";*/
+callback();
+}
+else{
+alert("Wrong Password or Username");
+}  
+}
+function redirectt(){
+        window.location.href ="main.html";
+    }
+</script>
+</head>
+<body>
+<div class="container">
+<div class="main">
+<h2> Login Form </h2>
+<form id="form_id" method="post" name="myform">
+<label>User Name :</label>
+<input type="text" name="username" id="username"/>
+<label>Password :</label>
+<input type="password" name="password" id="password"/>
+<input type="button" value="Login" id="submit" onclick="validate(redirectt)"/>
+</form>
+</div>
+</div>
+</body>
+</html>
